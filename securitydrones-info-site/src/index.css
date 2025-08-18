@@ -2,16 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global styles extending Tailwind's base. Using @apply allows us to
-   compose utilities at build time. */
 body {
   @apply font-body bg-primary text-white antialiased;
 }
 
-/* Scrollbar styling for modern browsers */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-secondary dark:bg-secondary-dark rounded-full;
-}
+/* Scrollbar styling (keep) */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { @apply bg-secondary/60 rounded; }
+::-webkit-scrollbar-thumb:hover { @apply bg-secondary; }
