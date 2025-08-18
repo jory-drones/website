@@ -27,7 +27,7 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          {/* Right: Logo + Book button */}
+          {/* Right: Book button + Logo */}
           <div className="flex items-center gap-4">
             <a
               href="#book"
@@ -35,14 +35,8 @@ export default function Navbar() {
             >
               Book a demo
             </a>
-
-            {/* Logo in top-right */}
             <a href="#top" className="shrink-0">
-              <img
-                src="/assets/logo.png"
-                alt="SecurityDrones.ai"
-                className="h-7 w-auto"
-              />
+              <img src="/assets/logo.png" alt="SecurityDrones.ai" className="h-7 w-auto" />
             </a>
           </div>
         </div>
