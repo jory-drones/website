@@ -25,20 +25,19 @@ export default function App() {
         {/* Calendly section */}
         <CalendlyEmbed />
 
-        {/* Simple "About" + "Contact" anchors so header tabs work */}
-        <section id="about" className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-          <h2 className="font-display text-3xl sm:text-4xl mb-4">About</h2>
-          <p className="text-white/80">
-            SecurityDrones.ai delivers autonomous perimeter patrols, thermal detection,
-            and instant notifications—covering large sites at a fraction of traditional costs.
-          </p>
-        </section>
+<section id="about" className="bg-primary">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <h2 className="font-display text-2xl sm:text-3xl text-white mb-3">About</h2>
+    <p className="text-white/75 max-w-4xl">
+      SecurityDrones.ai delivers autonomous perimeter patrols, thermal detection, and instant notifications—
+      covering large sites at a fraction of traditional costs.
+    </p>
+  </div>
+</section>
 
-        <section id="contact" className="max-w-6xl mx-auto px-4 sm:px-6 pb-24">
-          <h2 className="font-display text-3xl sm:text-4xl mb-4">Contact</h2>
-          <p className="text-white/80">Email: hello@securitydrones.ai</p>
-        </section>
-      </main>
-    </div>
-  );
-}
+<section id="contact" className="bg-primary">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+    <h2 className="font-display text-2xl sm:text-3xl text-white mb-3">Contact</h2>
+    <p className="text-white/75">Email: <a className="underline hover:no-underline" href="mailto:hello@securitydrones.ai">hello@securitydrones.ai</a></p>
+  </div>
+</section>
