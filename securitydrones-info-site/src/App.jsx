@@ -1,14 +1,14 @@
 // website/securitydrones-info-site/src/App.jsx
 import React from "react";
 import Navbar from "./components/Navbar.jsx";
-import HeroSplit from "./components/HeroSplit.jsx";
-import BeeSection from "./components/BeeSection.jsx";
-import HiveSection from "./components/HiveSection.jsx";
-import SystemSection from "./components/SystemSection.jsx";
-import Capabilities from "./components/Capabilities.jsx";
-import CTABanner from "./components/CTABanner.jsx";
-import CalendlyEmbed from "./components/CalendlyEmbed.jsx";
-import AboutContact from "./components/AboutContact.jsx";
+import HeroSplit from "./components/HeroSplit";
+import BeeSection from "./components/BeeSection";
+import HiveSection from "./components/HiveSection";
+import SystemSection from "./components/SystemSection";
+import Capabilities from "./components/Capabilities";
+import ROICalculator from "./components/ROICalculator";
+import CalendlyEmbed from "./components/CalendlyEmbed";
+
 
 export default function App() {
   return (
