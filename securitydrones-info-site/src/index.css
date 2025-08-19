@@ -1,13 +1,4 @@
-/* website/securitydrones-info-site/src/index.css */
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Optional global tweaks */
 html { scroll-behavior: smooth; }
 body { background-color: #0b1420; }
-
-/* Fonts are set via Tailwind classes (Syne for headings, Anta for body)
-   in your tailwind.config.js (already done earlier). */
