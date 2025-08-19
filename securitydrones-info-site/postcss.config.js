@@ -1,8 +1,7 @@
-// Tailwind v3 PostCSS config
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {}
-  }
-}
+// Tailwind v4 PostCSS config (no postcss-import)
+import tailwindcss from '@tailwindcss/postcss';
+import autoprefixer from 'autoprefixer';
 
+export default {
+  plugins: [tailwindcss(), autoprefixer()],
+};
