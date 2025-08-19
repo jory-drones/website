@@ -45,7 +45,7 @@ export default function HeroSplit() {
 
         {/* tiny glyph divider (optional) */}
         <div className="mt-6 flex justify-center">
-          <img src="/assets/bee-glyph.svg" alt="" className="h-5 opacity-70" onError={(e)=>{e.currentTarget.style.display='none'}} />
+          <img src="/assets/bee-glyph.png" alt="" className="h-5 opacity-70" onError={(e)=>{e.currentTarget.style.display='none'}} />
         </div>
       </div>
     </section>
