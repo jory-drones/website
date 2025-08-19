@@ -41,10 +41,9 @@ export default function HeroSplit() {
         {/* Right hero drone */}
         <div className="relative">
           <img
-            src="/assets/bee-front.png"
-            alt="Autonomous security drone"
-            className="w-full max-w-2xl mx-auto"
-            loading="eager"
+  src="/assets/bee-3q.png"
+  alt="The Bee drone"
+  className="mx-auto w-full max-w-2xl"
           />
         </div>
       </div>
