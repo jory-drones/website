@@ -1,57 +1,28 @@
+// website/securitydrones-info-site/src/App.jsx
 import React from "react";
 import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import Features from "./components/Features.jsx";
-import ROICalculator from "./components/ROICalculator.jsx";
+import HeroSplit from "./components/HeroSplit.jsx";
+import BeeSection from "./components/BeeSection.jsx";
+import HiveSection from "./components/HiveSection.jsx";
+import SystemSection from "./components/SystemSection.jsx";
+import Capabilities from "./components/Capabilities.jsx";
 import CTABanner from "./components/CTABanner.jsx";
 import CalendlyEmbed from "./components/CalendlyEmbed.jsx";
+import AboutContact from "./components/AboutContact.jsx";
 
 export default function App() {
   return (
     <div id="top" className="bg-primary text-white">
       <Navbar />
-
-      {/* sticky header offset */}
       <main className="pt-14 sm:pt-16">
-        <Hero />
-
-        {/* Services / Key Capabilities */}
-        <section id="services">
-          <Features />
-        </section>
-
-        {/* ROI */}
-        <ROICalculator />
-
-        {/* CTA */}
+        <HeroSplit />
+        <BeeSection />
+        <HiveSection />
+        <SystemSection />
+        <Capabilities />
         <CTABanner />
-
-        {/* Calendly */}
         <CalendlyEmbed />
-
-        {/* About */}
-        <section id="about" className="bg-primary">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-            <h2 className="font-display text-2xl sm:text-3xl text-white mb-3">About</h2>
-            <p className="text-white/75 max-w-4xl">
-              SecurityDrones.ai delivers autonomous perimeter patrols, thermal detection, and instant notifications—
-              covering large sites at a fraction of traditional costs.
-            </p>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section id="contact" className="bg-primary">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
-            <h2 className="font-display text-2xl sm:text-3xl text-white mb-3">Contact</h2>
-            <p className="text-white/75">
-              Email:{" "}
-              <a className="underline hover:no-underline" href="mailto:hello@securitydrones.ai">
-                hello@securitydrones.ai
-              </a>
-            </p>
-          </div>
-        </section>
+        <AboutContact />
       </main>
     </div>
   );
