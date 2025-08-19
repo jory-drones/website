@@ -3,11 +3,8 @@ import React from "react";
 
 export default function HeroSplit() {
   return (
-    <header
-      id="top"
-      className="relative isolate overflow-hidden bg-[#0b1420] text-white"
-    >
-      {/* background graphic */}
+    <header id="top" className="relative isolate overflow-hidden bg-primary text-white pt-14">
+      {/* Background network graphic */}
       <img
         src="/assets/hero-bg.png"
         alt=""
@@ -15,56 +12,46 @@ export default function HeroSplit() {
         loading="eager"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:flex lg:items-center lg:gap-12 lg:px-8 lg:py-28">
-        {/* LEFT: copy card */}
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10 backdrop-blur">
-            <img
-              src="/assets/bee-glyph.png"
-              alt=""
-              className="h-5 w-5 opacity-80"
-              onError={(e) => (e.currentTarget.style.display = "none")}
-            />
-            <span className="text-xs/5 tracking-wide text-white/80">
-              SECURITYDRONES.AI
-            </span>
-          </div>
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+        {/* Left glass card */}
+        <div className="max-w-md">
+          <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur px-6 py-6 sm:px-8 sm:py-8">
+            <h1 className="font-display leading-tight text-2xl sm:text-3xl">
+              <span className="block">The Only Fully</span>
+              <span className="block">Autonomous AI</span>
+              <span className="block">Drone Security</span>
+              <span className="block">System</span>
+            </h1>
 
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Replace guesswork with{" "}
-            <span className="text-[#5EE1FF]">always‑on aerial security</span>
-          </h1>
-
-          <p className="mt-5 max-w-xl text-white/70">
-            AI‑powered patrols, thermal detection and instant alerts covering
-            large sites at a fraction of traditional costs.
-          </p>
-
-          <div className="mt-8 flex items-center gap-4">
-            <a
-              href="#book"
-              className="inline-flex items-center rounded-full bg-[#9EC1E6] px-5 py-3 text-sm font-medium text-black transition hover:bg-[#b6d0ed]"
-            >
-              Book a demo
-            </a>
-            <a
-              href="#roi"
-              className="text-sm font-medium text-white/80 hover:text-white"
-            >
-              See your ROI
-            </a>
+            <p className="mt-4 text-[13px] leading-5 text-white/80">
+              Outside security and insights for large commercial, industrial, and
+              residential properties.
+            </p>
+            <p className="mt-3 text-[13px] leading-5 text-white/70">
+              Step into the future with our cutting‑edge technology solution that
+              redefines the boundaries of innovation.
+            </p>
+            <p className="mt-3 text-[13px] leading-5 text-white/60">
+              Experience unparalleled automation that empowers you to navigate the
+              digital landscape like never before.
+            </p>
           </div>
         </div>
 
-        {/* RIGHT: hero image */}
-        <div className="mx-auto mt-14 w-full max-w-xl lg:mt-0 lg:max-w-none lg:flex-1">
+        {/* Right hero drone */}
+        <div className="relative">
           <img
-            src="/assets/bee-3q.png"
+            src="/assets/bee-front.png"
             alt="Autonomous security drone"
-            className="mx-auto block w-full max-w-2xl drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]"
+            className="w-full max-w-2xl mx-auto"
             loading="eager"
           />
         </div>
+      </div>
+
+      {/* Tiny center glyph divider */}
+      <div className="relative flex justify-center pb-6">
+        <img src="/assets/bee-glyph.png" alt="" className="h-5 opacity-60" />
       </div>
     </header>
   );
