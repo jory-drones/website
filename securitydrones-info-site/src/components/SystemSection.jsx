@@ -10,8 +10,11 @@ export default function SystemSection() {
           Outside security and insights for large commercial, industrial, and residential properties.
         </p>
         <div className="mt-8">
-          <img src="/assets/app-ui.png" alt="Drone control apps"
-               className="w-full max-w-4xl mx-auto rounded-xl" />
+          <img
+            src="/assets/app-ui.png"
+            alt="Drone system interface"
+            className="w-full max-w-3xl mx-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </section>
