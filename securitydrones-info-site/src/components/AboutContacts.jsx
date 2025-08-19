@@ -1,30 +1,30 @@
 // website/securitydrones-info-site/src/components/AboutContact.jsx
 import React from "react";
 
-export default function AboutContact() {
+export default function AboutContacts() {
   return (
-    <>
-      <section id="about" className="bg-primary">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-14">
-          <h2 className="font-display text-2xl sm:text-3xl text-white mb-3">About</h2>
-          <p className="text-white/75 max-w-4xl">
-            SecurityDrones.ai delivers autonomous perimeter patrols, thermal detection, and instant
-            notifications—covering large sites at a fraction of traditional costs.
+    <footer className="bg-primary text-white border-t border-white/5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+        {/* About */}
+        <section id="about">
+          <h3 className="font-display text-xl">About</h3>
+          <p className="mt-3 text-white/80 text-[13px] max-w-4xl">
+            SecurityDrones.ai delivers autonomous perimeter patrols, thermal detection, and
+            instant notifications—covering large sites at a fraction of traditional costs.
           </p>
-        </div>
-      </section>
+        </section>
 
-      <section id="contact" className="bg-primary">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 pt-8">
-          <h2 className="font-display text-2xl sm:text-3xl text-white mb-3">Contact</h2>
-          <p className="text-white/75">
+        {/* Contact */}
+        <section id="contact" className="mt-12">
+          <h3 className="font-display text-xl">Contact</h3>
+          <p className="mt-3 text-white/80 text-[13px]">
             Email:{" "}
-            <a href="mailto:hello@securitydrones.ai" className="underline hover:no-underline">
+            <a className="underline hover:text-white" href="mailto:hello@securitydrones.ai">
               hello@securitydrones.ai
             </a>
           </p>
-        </div>
-      </section>
-    </>
+        </section>
+      </div>
+    </footer>
   );
 }
