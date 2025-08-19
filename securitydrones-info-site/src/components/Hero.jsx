@@ -1,82 +1,45 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-const CALENDLY_URL =
-  'https://calendly.com/securitydrones/demo?hide_event_type_details=1&hide_gdpr_banner=1';
-
-/**
- * The landing hero section. It establishes the brand by showing the
- * company logo and a concise value proposition atop a dynamic
- * background. Motion effects introduce the content elegantly.
- */
-function Hero() {
-  // Variants control the staggered entrance of each element in the hero.
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-  };
-
+export default function Hero() {
   return (
-    <header className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/assets/hero-bg.png)' }}
-      />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-primary/80" />
-      {/* Hero content */}
-      <motion.div
-        className="relative z-10 max-w-4xl px-6"
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-      >
-        {/* Logo */}
+    <section
+      className="relative isolate overflow-hidden bg-primary"
+      style={{ backgroundImage: "url(/assets/hero-bg.png)", backgroundSize: "cover", backgroundPosition: "50% 35%" }}
+    >
+      <div className="absolute inset-0 bg-primary/60" />
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-16 sm:pb-24 text-center">
         <motion.img
-          src="/assets/logo.png"
-          alt="SecurityDrones.ai logo"
-          className="mx-auto mb-6 h-12 md:h-16"
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          src="/assets/logo.png" alt="SecurityDrones.ai" className="h-10 sm:h-12 mx-auto mb-6"
         />
-        {/* Heading */}
         <motion.h1
-          className="text-4xl md:text-6xl font-heading font-extrabold mb-4"
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight text-white"
         >
-          Replace guesswork with
-          <br className="hidden md:block" /> always‑on aerial security
+          Replace guesswork with{" "}
+          <span className="block">always‑on aerial security</span>
         </motion.h1>
-        {/* Subheading */}
         <motion.p
-          className="text-lg md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto"
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-4 text-white/80 max-w-2xl mx-auto"
         >
-          AI‑powered patrols, thermal detection and instant alerts
-          covering large sites at a fraction of traditional costs.
+          AI‑powered patrols, thermal detection, and instant alerts covering large sites at a fraction of traditional costs.
         </motion.p>
-        {/* Call‑to‑action button */}
-        <motion.a
-          href={CALENDLY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          variants={itemVariants}
-          className="inline-block px-8 py-3 rounded-full bg-secondary text-primary font-heading text-lg font-semibold transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary-dark focus:ring-offset-2"
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-6"
         >
-          Book a Demo
-        </motion.a>
-      </motion.div>
-    </header>
+          <a href="#book" className="inline-block rounded-full px-5 py-2 bg-secondary text-white/90 hover:text-white hover:bg-secondary/90 ring-1 ring-white/10 transition">
+            Book a Demo
+          </a>
+        </motion.div>
+      </div>
+    </section>
   );
 }
-
-export default Hero;
