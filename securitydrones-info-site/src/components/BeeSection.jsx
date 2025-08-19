@@ -10,8 +10,11 @@ export default function BeeSection() {
           Outside security and insights for large commercial, industrial, and residential properties.
         </p>
         <div className="mt-8">
-          <img src="/assets/bee-front.png" alt="The Bee front view"
-               className="w-full max-w-3xl mx-auto" />
+          <img
+            src="/assets/bee-front.png"
+            alt="The Bee drone"
+            className="w-full max-w-2xl mx-auto"
+          />
         </div>
       </div>
     </section>
