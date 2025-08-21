@@ -3,17 +3,27 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const LOGOS = [
-  { src: "/assets/verkada.png", alt: "Verkada", href: "https://www.verkada.com/" },
-  { src: "/assets/alarmdotcom.png", alt: "Alarm.com", href: "https://www.alarm.com/" },
-  { src: "/assets/talkaphone.png", alt: "Talkaphone", href: "https://www.talkaphone.com/" },
-  { src: "/assets/rhombus.png", alt: "Rhombus", href: "https://www.rhombussystems.com/" },
-  { src: "/assets/singlewire.png", alt: "Singlewire", href: "https://www.singlewire.com/" },
-  { src: "/assets/meteomatics.png", alt: "Meteomatics", href: "https://www.meteomatics.com/" },
+  { src: "/assets/integrations/verkada.png", alt: "Verkada", href: "https://www.verkada.com/" },
+  { src: "/assets/integrations/alarmdotcom.png", alt: "Alarm.com", href: "https://www.alarm.com/" },
+  { src: "/assets/integrations/talkaphone.png", alt: "Talkaphone", href: "https://www.talkaphone.com/" },
+  { src: "/assets/integrations/rhombus.png", alt: "Rhombus", href: "https://www.rhombussystems.com/" },
+  { src: "/assets/integrations/singlewire.png", alt: "Singlewire", href: "https://www.singlewire.com/" },
+  { src: "/assets/integrations/meteomatics.png", alt: "Meteomatics", href: "https://www.meteomatics.com/" },
 ];
 
 export default function Integrations() {
   return (
-    <section className="bg-primary py-16 sm:py-24">
+    <section className="bg-primary py-20 sm:py-28 relative overflow-hidden">
+      {/* Animated divider */}
+      <motion.div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent"
+        initial={{ opacity: 0, scaleX: 0.4 }}
+        whileInView={{ opacity: 1, scaleX: 1 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        style={{ transformOrigin: "center" }}
+      />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         {/* Heading */}
         <motion.h2
@@ -40,7 +50,7 @@ export default function Integrations() {
         </motion.p>
 
         {/* Logo grid */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 place-items-center">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 place-items-center">
           {LOGOS.map((logo, i) => (
             <motion.a
               key={logo.alt}
@@ -67,3 +77,4 @@ export default function Integrations() {
     </section>
   );
 }
+
