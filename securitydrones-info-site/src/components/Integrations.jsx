@@ -3,12 +3,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const LOGOS = [
-  { src: "/assets/integrations/verkada.png", alt: "Verkada", href: "https://www.verkada.com/" },
-  { src: "/assets/integrations/alarmdotcom.png", alt: "Alarm.com", href: "https://www.alarm.com/" },
-  { src: "/assets/integrations/talkaphone.png", alt: "Talkaphone", href: "https://www.talkaphone.com/" },
-  { src: "/assets/integrations/rhombus.png", alt: "Rhombus", href: "https://www.rhombussystems.com/" },
-  { src: "/assets/integrations/singlewire.png", alt: "Singlewire", href: "https://www.singlewire.com/" },
-  { src: "/assets/integrations/meteomatics.png", alt: "Meteomatics", href: "https://www.meteomatics.com/" },
+  { src: "/assets/verkada.png", alt: "Verkada", href: "https://www.verkada.com/" },
+  { src: "/assets/alarmdotcom.png", alt: "Alarm.com", href: "https://www.alarm.com/" },
+  { src: "/assets/talkaphone.png", alt: "Talkaphone", href: "https://www.talkaphone.com/" },
+  { src: "/assets/rhombus.png", alt: "Rhombus", href: "https://www.rhombussystems.com/" },
+  { src: "/assets/singlewire.png", alt: "Singlewire", href: "https://www.singlewire.com/" },
+  { src: "/assets/meteomatics.png", alt: "Meteomatics", href: "https://www.meteomatics.com/" },
 ];
 
 export default function Integrations() {
