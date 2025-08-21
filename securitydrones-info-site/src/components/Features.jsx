@@ -1,7 +1,7 @@
 // /src/components/Features.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import FeaturesCard from "./FeaturesCard.jsx";
+import FeatureCard from "./FeatureCard.jsx";
 
 export default function Features() {
   return (
