@@ -9,12 +9,13 @@ import SystemSection from "./components/SystemSection.jsx";
 import Features from "./components/Features.jsx";
 import Integrations from "./components/Integrations.jsx";
 import DemoCTA from "./components/DemoCTA.jsx";
-import ROICalculator from "./components/ROICalculator.jsx"; // your Calendly embed
+import CalendlyEmbed from "./components/CalendlyEmbed.jsx";
+import AboutContacts from "./components/AboutContacts.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
-    <main className="text-white">
+    <main>
       <Navbar />
       <HeroSplit />
       <BeeSection />
@@ -23,7 +24,8 @@ export default function App() {
       <Features />
       <Integrations />
       <DemoCTA />
-      <ROICalculator />
+      <CalendlyEmbed />
+      <AboutContacts />
       <Footer />
     </main>
   );
