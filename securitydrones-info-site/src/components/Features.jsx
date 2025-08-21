@@ -1,68 +1,44 @@
 // /src/components/Features.jsx
 import React from "react";
-import { motion } from "framer-motion";
-import FeatureCard from "./FeatureCard.jsx";
+import { Shield, FlameKindling, Video, Bell } from "lucide-react";
+import FeatureCard from "./FeatureCard.jsx";  // ✅ singular file name
 
 export default function Features() {
   return (
-    <section className="bg-white py-20 sm:py-28 relative overflow-hidden">
-      {/* Unified animated divider */}
-      <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"
-        initial={{ opacity: 0, scaleX: 0.4 }}
-        whileInView={{ opacity: 1, scaleX: 1 }}
-        viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        style={{ transformOrigin: "center" }}
-      />
-
+    <section id="features" className="bg-primary py-16 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Heading */}
-        <motion.h2
-          className="text-center font-display text-2xl sm:text-3xl text-gray-900"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Capabilities
-        </motion.h2>
+        <h2 className="font-display text-2xl sm:text-3xl text-white text-center">
+          Key Capabilities
+        </h2>
+        <p className="mt-3 text-center text-white/70 max-w-3xl mx-auto">
+          SecurityDrones.ai combines advanced autonomy, smart sensors and cloud intelligence
+          into one seamless solution. Discover how our platform keeps your assets protected
+          around the clock.
+        </p>
 
-        {/* Grid of feature cards */}
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <FeaturesCard
-            title="Autonomous Patrol"
-            description="Smart scheduling and AI-driven routes ensure continuous monitoring without manual oversight."
-            icon="drone"
+        <div className="mt-10 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <FeatureCard
+            Icon={Shield}
+            title="Perimeter Patrol"
+            description="Autonomous patrols cover vast perimeters with 360° vision, reducing blind spots and human error."
           />
-          <FeaturesCard
-            title="Perimeter Security"
-            description="Deter and detect intrusions with advanced aerial and ground-level awareness."
-            icon="shield"
+          <FeatureCard
+            Icon={FlameKindling}
+            title="Thermal Vision"
+            description="Built‑in thermal sensors detect intrusions and fire hazards day or night, even in zero‑light conditions."
           />
-          <FeaturesCard
-            title="Live Intelligence"
-            description="Real-time video feeds, alerts, and analytics delivered straight to your command center."
-            icon="eye"
+          <FeatureCard
+            Icon={Video}
+            title="Incident Recording"
+            description="Capture high‑definition video clips of every event and integrate with your existing security systems."
           />
-          <FeaturesCard
-            title="Incident Response"
-            description="Automated dispatch and escalation workflows improve response speed and reduce risk."
-            icon="alert"
-          />
-          <FeaturesCard
-            title="Data Insights"
-            description="Actionable analytics to uncover patterns, optimize operations, and drive ROI."
-            icon="chart"
-          />
-          <FeaturesCard
-            title="Seamless Integration"
-            description="Works with existing systems and platforms to maximize efficiency and value."
-            icon="plug"
+          <FeatureCard
+            Icon={Bell}
+            title="Real‑Time Alerts"
+            description="Instant notifications are pushed to your phone or SOC the moment a perimeter breach is detected."
           />
         </div>
       </div>
     </section>
   );
 }
-
