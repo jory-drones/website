@@ -25,7 +25,7 @@ export default function Footer() {
               <a className="underline hover:text-white" href="mailto:hello@securitydrones.ai">
                 hello@securitydrones.ai
               </a><br />
-              (444) 841‑8*** {/* replace with full number if desired */}
+              (424) 241‑2216
             </p>
           </div>
         </div>
