@@ -3,20 +3,20 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const LOGOS = [
-  { src: "/assets/integrations/verkada.png", alt: "Verkada", href: "https://www.verkada.com/" },
-  { src: "/assets/integrations/alarmdotcom.png", alt: "Alarm.com", href: "https://www.alarm.com/" },
-  { src: "/assets/integrations/talkaphone.png", alt: "Talkaphone", href: "https://www.talkaphone.com/" },
-  { src: "/assets/integrations/rhombus.png", alt: "Rhombus", href: "https://www.rhombussystems.com/" },
-  { src: "/assets/integrations/singlewire.png", alt: "Singlewire", href: "https://www.singlewire.com/" },
-  { src: "/assets/integrations/meteomatics.png", alt: "Meteomatics", href: "https://www.meteomatics.com/" },
+  { src: "/assets/verkada.png", alt: "Verkada", href: "https://www.verkada.com/" },
+  { src: "/assets/alarmdotcom.png", alt: "Alarm.com", href: "https://www.alarm.com/" },
+  { src: "/assets/talkaphone.png", alt: "Talkaphone", href: "https://www.talkaphone.com/" },
+  { src: "/assets/rhombus.png", alt: "Rhombus", href: "https://www.rhombussystems.com/" },
+  { src: "/assets/singlewire.png", alt: "Singlewire", href: "https://www.singlewire.com/" },
+  { src: "/assets/meteomatics.png", alt: "Meteomatics", href: "https://www.meteomatics.com/" },
 ];
 
 export default function Integrations() {
   return (
     <section className="bg-primary py-20 sm:py-28 relative overflow-hidden">
-      {/* Animated divider */}
+      {/* Unified animated divider (via primary) */}
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"
         initial={{ opacity: 0, scaleX: 0.4 }}
         whileInView={{ opacity: 1, scaleX: 1 }}
         viewport={{ once: true, margin: "-40px" }}
@@ -25,7 +25,6 @@ export default function Integrations() {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        {/* Heading */}
         <motion.h2
           className="font-display text-2xl sm:text-3xl text-white"
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +35,6 @@ export default function Integrations() {
           Seamless Integrations
         </motion.h2>
 
-        {/* Subcopy */}
         <motion.p
           className="mt-3 max-w-3xl mx-auto text-white/70"
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +55,7 @@ export default function Integrations() {
               href={logo.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-36 sm:w-44 rounded-xl border border-secondary/60 bg-primary-light/40 p-4 hover:bg-primary-light/60 transition-colors"
+              className="block w-36 sm:w-44 rounded-xl ring-1 ring-white/10 bg-white/5 p-4 hover:bg-white/10 transition-colors"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
