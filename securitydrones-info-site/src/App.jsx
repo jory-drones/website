@@ -10,7 +10,6 @@ import Features from "./components/Features.jsx";
 import Integrations from "./components/Integrations.jsx";
 import DemoCTA from "./components/DemoCTA.jsx";
 import CalendlyEmbed from "./components/CalendlyEmbed.jsx";
-import AboutContacts from "./components/AboutContacts.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
