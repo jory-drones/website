@@ -7,20 +7,24 @@ import BeeSection from "./components/BeeSection.jsx";
 import HiveSection from "./components/HiveSection.jsx";
 import SystemSection from "./components/SystemSection.jsx";
 import Features from "./components/Features.jsx";
-import CTABanner from "./components/CTABanner.jsx";
-import AboutContacts from "./components/AboutContacts.jsx";
+import Integrations from "./components/Integrations.jsx";
+import DemoCTA from "./components/DemoCTA.jsx";
+import ROICalculator from "./components/ROICalculator.jsx"; // your Calendly embed
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
-    <main className="bg-primary text-white">
+    <main className="text-white">
       <Navbar />
       <HeroSplit />
       <BeeSection />
       <HiveSection />
       <SystemSection />
       <Features />
-      <CTABanner />
-      <AboutContacts />
+      <Integrations />
+      <DemoCTA />
+      <ROICalculator />
+      <Footer />
     </main>
   );
 }
