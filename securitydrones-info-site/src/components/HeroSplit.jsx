@@ -1,13 +1,11 @@
-// /src/components/HeroSplit.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function HeroSplit() {
   return (
     <section className="relative bg-[url('/assets/hero-bg.png')] bg-cover bg-center">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 pt-28 pb-20 sm:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          {/* Left: text block */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -22,14 +20,14 @@ export default function HeroSplit() {
             </p>
           </motion.div>
 
-          {/* Right: hero drone = THREE-QUARTER ANGLE */}
+          {/* HERO: 3/4 view */}
           <motion.img
+            src="/assets/bee-3q.png"
+            alt="The Bee drone"
+            className="w-full h-auto drop-shadow-xl"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            src="/assets/bee-3q.png"           /* << correct hero image */
-            alt="The Bee drone"
-            className="w-full h-auto drop-shadow-xl"
           />
         </div>
 
