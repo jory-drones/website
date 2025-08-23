@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap');
 
-@theme {
-  --color-primary: #0b1420;
-  --color-primary-light: #152233;
-  --color-secondary: #6cc1ff;
-  --color-muted: #94a3b8;
-
-  --font-display: "Orbitron", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Base defaults */
 @layer base {
-  html, body { @apply bg-primary text-white font-body; }
-  h1,h2,h3,h4,.font-display,.font-heading { @apply font-display; }
+  html, body {
+    @apply bg-primary text-white font-body;
+  }
+  h1, h2, h3, h4, .font-display, .font-heading {
+    @apply font-display;
+  }
 }
