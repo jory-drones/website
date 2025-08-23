@@ -1,23 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        display: ['Syne', 'ui-sans-serif', 'system-ui'],
-        body: ['Anta', 'ui-sans-serif', 'system-ui']
-      },
+      // keep your colors; these are examples you already use
       colors: {
-        primary: "#0b1020",
-        secondary: "#111a2e",
-        accent: "#16a34a",
-        cyan: "#22d3ee",
-        blue: "#60a5fa"
-      }
-    }
+        primary: "#0b1420",
+        "primary-light": "rgba(255,255,255,0.06)",
+        secondary: "rgba(255,255,255,0.16)",
+      },
+      fontFamily: {
+        display: ["Orbitron", "ui-sans-serif", "system-ui", "sans-serif"],
+        body: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      maxWidth: {
+        prose: "65ch",
+      },
+      boxShadow: {
+        inset: "inset 0 0 0 1px rgba(255,255,255,0.04)",
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
