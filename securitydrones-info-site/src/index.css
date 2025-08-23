@@ -1,13 +1,25 @@
-/* /src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SecurityDrones.ai</title>
 
-@layer base {
-  html, body {
-    @apply bg-primary text-white font-body;
-  }
-  h1, h2, h3, h4, .font-display, .font-heading {
-    @apply font-display;
-  }
-}
+    <!-- Preconnects for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Orbitron (headings) + Inter (body) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="theme-color" content="#0b1420" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: this bootstraps the React app -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
