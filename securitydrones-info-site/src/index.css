@@ -1,3 +1,4 @@
+/* /src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +7,7 @@
   html, body {
     @apply bg-primary text-white font-body;
   }
-  h1, h2, h3, h4, .font-heading {
+  h1, h2, h3, h4, .font-heading, .font-display {
     @apply font-display;
   }
 }
