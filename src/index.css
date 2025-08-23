@@ -1,12 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind layers */
+@import "tailwindcss";
 
-/* Fonts applied globally */
-html, body {
-  @apply bg-primary text-white font-body;
-}
-
-h1, h2, h3, h4 {
-  @apply font-display;
+/* Base defaults */
+@layer base {
+  html, body {
+    @apply bg-slate-950 text-slate-100 font-body;
+  }
+  h1,h2,h3,h4,
+  .font-display,
+  .font-heading {
+    @apply font-display;
+  }
 }
