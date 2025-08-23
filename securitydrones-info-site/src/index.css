@@ -1,4 +1,15 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html { scroll-behavior: smooth; }
-body { background-color: #0b1420; }
+/* Apply our font families globally with Tailwind's base layer */
+@layer base {
+  html, body {
+    @apply bg-primary text-white font-body;
+  }
+
+  /* All headings use Orbitron */
+  h1, h2, h3, h4, .font-heading {
+    @apply font-display;
+  }
+}
