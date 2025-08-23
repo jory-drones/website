@@ -3,45 +3,51 @@ import React from "react";
 
 export default function HeroSplit() {
   return (
-    <header id="top" className="relative isolate overflow-hidden bg-[#0b1420] text-white">
-      {/* Background image */}
-      <img
-        src="/assets/hero-bg.png"
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-40 pointer-events-none select-none"
-        loading="eager"
-      />
-
-      <section className="relative max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
-        <div className="grid lg:grid-cols-12 gap-8 items-center">
-          {/* Left card */}
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-white/10 ring-1 ring-white/10 p-6 sm:p-7 backdrop-blur">
-              <h1 className="font-display text-2xl sm:text-3xl leading-tight">
-                The Only Fully{" "}
-                <span className="block">Autonomous AI</span>
-                <span className="block">Drone Security</span>
-                <span className="block">System</span>
-              </h1>
-              <p className="mt-3 text-white/80 text-sm">
-                Outside security and insights for large commercial, industrial, and residential
-                properties. Step into the future with our cutting‑edge technology that redefines
-                the boundaries of innovation.
-              </p>
-            </div>
-          </div>
-
-          {/* Right image — HERO uses bee-front.png */}
-          <div className="lg:col-span-7 flex justify-center">
-            <img
-              src="/assets/bee-front.png"
-              alt="Drone front view"
-              className="w-[520px] max-w-full h-auto"
-              loading="eager"
-            />
-          </div>
+    <section
+      className="relative overflow-hidden"
+      aria-label="Hero"
+      style={{
+        backgroundImage: "url('/assets/hero-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Left glass card */}
+        <div className="bg-white/8 backdrop-blur rounded-3xl border border-white/10 p-8 sm:p-10">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            Fully Autonomous<br /> Drone Security<br /> System
+          </h1>
+          <p className="mt-5 text-white/80 max-w-prose">
+            AI security and data insights for large commercial, industrial &
+            residential properties.
+          </p>
         </div>
-      </section>
-    </header>
+
+        {/* Right drone visual (frontal) */}
+        <div className="relative -mt-4 lg:mt-0">
+          <img
+            src="/assets/bee-front.png"
+            alt="Autonomous security drone"
+            className="w-full max-w-[720px] mx-auto drop-shadow-xl pointer-events-none select-none"
+            loading="eager"
+          />
+        </div>
+      </div>
+
+      {/* Micro CTA */}
+      <div className="pb-10 sm:pb-12 text-center">
+        <a href="#system" className="inline-flex flex-col items-center gap-2">
+          <span className="font-display tracking-wide text-white/90">
+            See How It Works
+          </span>
+          <img
+            src="/assets/bee-glyph.png"
+            alt=""
+            className="h-5 w-auto opacity-70"
+          />
+        </a>
+      </div>
+    </section>
   );
 }
