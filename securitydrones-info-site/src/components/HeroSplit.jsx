@@ -24,10 +24,10 @@ export default function HeroSplit() {
           </p>
         </div>
 
-        {/* Right drone visual (frontal) */}
+        {/* Right drone visual — 3/4 angled image */}
         <div className="relative -mt-4 lg:mt-0">
           <img
-            src="/assets/bee-front.png"
+            src="/assets/bee-3q.png"
             alt="Autonomous security drone"
             className="w-full max-w-[720px] mx-auto drop-shadow-xl pointer-events-none select-none"
             loading="eager"
