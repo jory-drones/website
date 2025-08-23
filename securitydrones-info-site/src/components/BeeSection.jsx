@@ -1,6 +1,5 @@
-// /src/components/BeeSection.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function BeeSection() {
   return (
@@ -18,9 +17,9 @@ export default function BeeSection() {
           Outside security and insights for large commercial, industrial, and residential properties.
         </p>
 
-        {/* FRONT VIEW drone for the Bee section */}
+        {/* BEE: front view */}
         <motion.img
-          src="/assets/bee-front.png"          /* << correct Bee image */
+          src="/assets/bee-front.png"
           alt="The Bee front view"
           className="mt-8 w-full max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 12 }}
