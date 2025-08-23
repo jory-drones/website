@@ -13,61 +13,46 @@ const LOGOS = [
 
 export default function Integrations() {
   return (
-    <section className="bg-primary py-20 sm:py-28 relative overflow-hidden">
-      {/* Unified animated divider (via primary) */}
+    <section id="integrations" className="bg-primary py-16 sm:py-18 relative overflow-hidden">
+      {/* thin divider */}
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent"
         initial={{ opacity: 0, scaleX: 0.4 }}
         whileInView={{ opacity: 1, scaleX: 1 }}
         viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.5 }}
         style={{ transformOrigin: "center" }}
       />
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <motion.h2
-          className="font-display text-2xl sm:text-3xl text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Seamless Integrations
-        </motion.h2>
+        <h2 className="font-display text-2xl sm:text-3xl text-white">Seamless Integrations</h2>
+        <p className="mt-3 max-w-3xl mx-auto text-white/70">
+          Connect effortlessly with leading security, communication, and data platforms to fit your
+          existing ecosystem.
+        </p>
 
-        <motion.p
-          className="mt-3 max-w-3xl mx-auto text-white/70"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.08 }}
-        >
-          Connects effortlessly with leading security, communication, and data platforms
-          to fit into your existing ecosystem. Our integrations extend your capabilities
-          and maximize the value of your investment.
-        </motion.p>
-
-        {/* Logo grid */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 place-items-center">
+        {/* 1:1 consistent cards */}
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8">
           {LOGOS.map((logo, i) => (
             <motion.a
               key={logo.alt}
               href={logo.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-36 sm:w-44 rounded-xl ring-1 ring-white/10 bg-white/5 p-4 hover:bg-white/10 transition-colors"
+              className="group relative block rounded-xl border border-secondary/60 bg-primary-light/40 p-4"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.05 * i }}
               aria-label={logo.alt}
             >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="w-full h-auto object-contain mx-auto grayscale hover:grayscale-0 transition-all duration-300"
-                loading="lazy"
-              />
+              <div className="aspect-[4/3] w-full flex items-center justify-center">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-16 w-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
             </motion.a>
           ))}
         </div>
@@ -75,4 +60,3 @@ export default function Integrations() {
     </section>
   );
 }
-
