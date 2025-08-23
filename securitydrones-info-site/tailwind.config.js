@@ -3,21 +3,17 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      // keep your colors; these are examples you already use
       colors: {
         primary: "#0b1420",
-        "primary-light": "rgba(255,255,255,0.06)",
-        secondary: "rgba(255,255,255,0.16)",
+        "primary-light": "#121c2a",
+        secondary: "#2e3a4b",
       },
       fontFamily: {
         display: ["Orbitron", "ui-sans-serif", "system-ui", "sans-serif"],
         body: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
-      maxWidth: {
-        prose: "65ch",
-      },
-      boxShadow: {
-        inset: "inset 0 0 0 1px rgba(255,255,255,0.04)",
+      borderRadius: {
+        "3xl": "1.5rem",
       },
     },
   },
