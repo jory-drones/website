@@ -4,49 +4,34 @@ import React from "react";
 
 export default function HiveSection() {
   return (
-    <section className="bg-primary">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-20 lg:py-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          {/* Text first on large screens */}
-          <div className="lg:col-span-6 order-2 lg:order-1">
-            <h2 className="font-display text-3xl">The Hive</h2>
-            <p className="mt-1 text-white/70">Brains. Charging. Control.</p>
+    <section id="hive" className="bg-primary py-12 sm:py-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 className="font-display text-2xl text-white">The Hive</h2>
+        <p className="mt-2 text-white/70 max-w-3xl mx-auto text-sm">
+          Brains. Charging. Control. More than a dock—it manages processing, charging, and
+          mission automation for reliable autonomous operation.
+        </p>
 
-            <p className="mt-4 text-white/80 text-sm">
-              The Hive is more than a charging station — it’s the command center of the system,
-              processing and analyzing data with embedded AI, coordinating secure operations and
-              enabling continuous performance in the field.
-            </p>
+        <img
+          src="/assets/hive-open.png"
+          alt="The Hive open dock"
+          className="w-[520px] max-w-full mx-auto mt-6"
+          loading="lazy"
+        />
 
-            <div className="mt-6 grid sm:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-medium text-white/90">Key Specifications</h3>
-                <ul className="mt-2 space-y-1 text-white/70 text-sm">
-                  <li>• Weight: ~35 kg</li>
-                  <li>• Dimensions: ~91 × 77 × 38 cm</li>
-                  <li>• Power Supply: 110V or 220V AC</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-medium text-white/90">Connectivity</h3>
-                <ul className="mt-2 space-y-1 text-white/70 text-sm">
-                  <li>• Ethernet by default</li>
-                  <li>• Optional 5G/LTE modem</li>
-                  <li>• Operating temp: -20°C to 50°C</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="lg:col-span-6 order-1 lg:order-2">
-            <img
-              src="/assets/hive-open.png"
-              alt="The Hive dock"
-              className="w-full max-w-xl mx-auto"
-            />
-          </div>
-        </div>
+        {/* Accordion */}
+        <details className="mt-5 max-w-2xl mx-auto rounded-xl border border-secondary/40 bg-primary-light/40 p-4 text-left">
+          <summary className="cursor-pointer list-none font-medium text-white">
+            Technical specs
+          </summary>
+          <ul className="mt-3 list-disc pl-5 text-white/80 text-sm space-y-1">
+            <li>Weight: 35 kg</li>
+            <li>Runtime on backup battery: 1 hour</li>
+            <li>Connectivity: Ethernet + optional 5G/LTE modem</li>
+            <li>Power: 110V or 220V AC</li>
+            <li>Operating temps: -20°C to 50°C (-4°F to 122°F)</li>
+          </ul>
+        </details>
       </div>
     </section>
   );
