@@ -1,23 +1,29 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SecurityDrones.ai</title>
+/* Load fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap");
 
-    <!-- Preconnects for font performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+/* Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    <!-- Orbitron (headings) + Inter (body) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- This boots the app -->
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+/* Base styles */
+:root {
+  --color-primary: #0b1420;
+}
+
+/* Use system CSS for fonts (no Tailwind font-* tokens) */
+html,
+body {
+  background: var(--color-primary);
+  color: #ffffff;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading font helper */
+.font-heading {
+  font-family: "Orbitron", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+}
