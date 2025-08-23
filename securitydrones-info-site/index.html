@@ -1,35 +1,20 @@
-/* /src/index.css — Tailwind v4 style */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap');
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SecurityDrones.ai</title>
 
-/* Define custom design tokens in Tailwind v4 */
-@theme {
-  /* Colors */
-  --color-primary: #0b1420;
-  --color-primary-light: #152233;
-  --color-secondary: #6cc1ff;
-  --color-muted: #94a3b8;
+    <!-- Fonts (Orbitron + Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet" />
 
-  /* Fonts */
-  --font-display: "Orbitron", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
-
-  /* Optional */
-  --shadow-card: 0 4px 24px rgba(0,0,0,.25);
-}
-
-/* Tailwind layers */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Base defaults */
-@layer base {
-  html, body {
-    @apply bg-primary text-white font-body;
-  }
-  h1,h2,h3,h4,
-  .font-display,
-  .font-heading {
-    @apply font-display;
-  }
-}
+    <meta name="theme-color" content="#0b1420" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- CRITICAL: this boots the app. Keep type="module". -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
