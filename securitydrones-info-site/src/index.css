@@ -1,25 +1,20 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SecurityDrones.ai</title>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap');
 
-    <!-- Preconnects for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+@theme {
+  --color-primary: #0b1420;
+  --color-primary-light: #152233;
+  --color-secondary: #6cc1ff;
+  --color-muted: #94a3b8;
 
-    <!-- Orbitron (headings) + Inter (body) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  --font-display: "Orbitron", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
 
-    <meta name="theme-color" content="#0b1420" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: this bootstraps the React app -->
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { @apply bg-primary text-white font-body; }
+  h1,h2,h3,h4,.font-display,.font-heading { @apply font-display; }
+}
