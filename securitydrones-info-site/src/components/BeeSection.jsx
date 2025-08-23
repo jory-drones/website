@@ -6,10 +6,10 @@ export default function BeeSection() {
   return (
     <section className="bg-primary py-16 sm:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-        {/* Left: image */}
+        {/* Left: image — straight-on view */}
         <div>
           <img
-            src="/assets/bee-3q.png"
+            src="/assets/bee-front.png"
             alt="The Bee autonomous drone"
             className="w-full max-w-[600px] mx-auto"
             loading="lazy"
@@ -66,3 +66,4 @@ export default function BeeSection() {
     </section>
   );
 }
+
