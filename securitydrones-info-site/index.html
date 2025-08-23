@@ -1,4 +1,4 @@
-/* /src/index.css  — Tailwind v4 style */
+/* /src/index.css — Tailwind v4 style */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap');
 
 /* Define custom design tokens in Tailwind v4 */
@@ -9,11 +9,11 @@
   --color-secondary: #6cc1ff;
   --color-muted: #94a3b8;
 
-  /* Fonts (these become utilities: font-display, font-body) */
+  /* Fonts */
   --font-display: "Orbitron", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  /* Optional radius/shadows, if you want to use them as tokens: */
+  /* Optional */
   --shadow-card: 0 4px 24px rgba(0,0,0,.25);
 }
 
@@ -27,7 +27,9 @@
   html, body {
     @apply bg-primary text-white font-body;
   }
-  h1,h2,h3,h4, .font-display, .font-heading {
+  h1,h2,h3,h4,
+  .font-display,
+  .font-heading {
     @apply font-display;
   }
 }
