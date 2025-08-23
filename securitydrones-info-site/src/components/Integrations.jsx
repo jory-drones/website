@@ -13,46 +13,38 @@ const LOGOS = [
 
 export default function Integrations() {
   return (
-    <section id="integrations" className="bg-primary py-16 sm:py-18 relative overflow-hidden">
-      {/* thin divider */}
-      <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent"
-        initial={{ opacity: 0, scaleX: 0.4 }}
-        whileInView={{ opacity: 1, scaleX: 1 }}
-        viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.5 }}
-        style={{ transformOrigin: "center" }}
-      />
+    <section id="integrations" className="bg-primary py-16 sm:py-20 relative overflow-hidden">
+      {/* subtle divider */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent" />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <h2 className="font-display text-2xl sm:text-3xl text-white">Seamless Integrations</h2>
-        <p className="mt-3 max-w-3xl mx-auto text-white/70">
-          Connect effortlessly with leading security, communication, and data platforms to fit your
-          existing ecosystem.
+        <h2 className="font-display text-2xl sm:text-3xl">Seamless Integrations</h2>
+        <p className="mt-3 max-w-3xl mx-auto text-white/80">
+          Connects effortlessly with leading security, communication, and data platforms to fit into your
+          existing ecosystem. From cameras and alarms to weather data and emergency call systems,
+          our integrations extend your capabilities and maximize the value of your investment.
         </p>
 
-        {/* 1:1 consistent cards */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
           {LOGOS.map((logo, i) => (
             <motion.a
               key={logo.alt}
               href={logo.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative block rounded-xl border border-secondary/60 bg-primary-light/40 p-4"
+              className="w-64 h-44 sm:w-72 sm:h-48 rounded-2xl border border-white/15 bg-white/[0.06] flex items-center justify-center"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.05 * i }}
+              transition={{ duration: 0.45, delay: 0.05 * i }}
               aria-label={logo.alt}
             >
-              <div className="aspect-[4/3] w-full flex items-center justify-center">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="max-h-16 w-auto object-contain"
-                  loading="lazy"
-                />
-              </div>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-16 sm:max-h-20 w-auto object-contain"
+                loading="lazy"
+              />
             </motion.a>
           ))}
         </div>
