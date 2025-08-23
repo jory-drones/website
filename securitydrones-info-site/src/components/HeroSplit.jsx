@@ -4,48 +4,40 @@ import { motion } from "framer-motion";
 
 export default function HeroSplit() {
   return (
-    <header className="relative overflow-hidden bg-[url('/assets/hero-bg.png')] bg-cover bg-center">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* Left: copy card */}
+    <section className="relative bg-[url('/assets/hero-bg.png')] bg-cover bg-center">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 pt-28 pb-20 sm:pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <motion.div
-            className="bg-white/10 backdrop-blur rounded-3xl p-8 sm:p-10 border border-white/15"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl bg-primary/60 backdrop-blur-md p-8 sm:p-10 border border-white/10"
           >
-            <h1 className="font-display text-4xl sm:text-5xl leading-tight">
-              Fully Autonomous
-              <br /> Drone Security
-              <br /> System
+            <h1 className="text-white font-display text-4xl sm:text-5xl leading-tight">
+              Fully Autonomous<br />Drone Security<br />System
             </h1>
-
-            <p className="mt-6 text-white/80 max-w-prose">
-              AI security and data insights for large commercial, industrial &amp;
-              residential properties.
+            <p className="mt-6 text-white/80">
+              AI security and data insights for large commercial, industrial &amp; residential properties.
             </p>
           </motion.div>
 
-          {/* Right: hero drone — angled 3/4 image */}
+          {/* HERO: 3/4 view */}
           <motion.img
             src="/assets/bee-3q.png"
-            alt="Autonomous security drone"
-            className="w-full max-w-[720px] mx-auto drop-shadow-xl pointer-events-none select-none"
-            initial={{ opacity: 0, scale: 0.98, y: 12 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            loading="eager"
+            alt="The Bee drone"
+            className="w-full h-auto drop-shadow-xl"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           />
         </div>
 
-        {/* scroll hint */}
         <div className="mt-10 text-center">
-          <p className="text-white/70">See How It Works</p>
-          <div className="mx-auto mt-2 h-1 w-24 bg-gradient-to-r from-transparent via-secondary to-transparent rounded-full" />
+          <span className="text-white/80">See How It Works</span>
+          <div className="mx-auto mt-3 h-[2px] w-24 bg-gradient-to-r from-transparent via-secondary to-transparent" />
         </div>
       </div>
-    </header>
+    </section>
   );
 }
+
